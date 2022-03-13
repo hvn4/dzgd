@@ -1,0 +1,71 @@
+print("Задание 1")
+print("")
+a = [1, "2", None, "TEXT"]
+print(type(a[0]))
+print(type(a[1]))
+print(type(a[2]))
+print(type(a[3]))
+print("")
+print("Задание 2")
+print("")
+
+b = []
+x = 1
+while x == 1:
+    b.append(input("Введите значения в список:"))
+    print(b)
+    x = int(input("Если нужно еще значение введите 1, если хватит напишете 0"))
+print(f"Получился Список {b}")
+print("")
+print("Произведем обмен значенией в списке: ")
+print("")
+# n=b[:]
+# n[::2], n[1::2] = n[1::2], n[::2]
+# print(n)
+#Данный вариант работатет только для четных списков
+for i in range(1, len(b), 2):
+    b[i-1], b[i] = b[i], b[i-1]
+print(b)
+print("")
+print("Задание 3")
+print("")
+x = int(input("Введите целое чилсо от 1 до 12ти: "))
+year = { 1: "Январь" ,2:" Февраль", 3:"Март" ,4:"Апрель" ,5:" Май", 6:"Июнь",7:"Июль" ,8:" Август", 9:"Сентябрь",10:"Октябрь",11:" Ноябрь",12: "Декабрь"}
+y = "Зимe"
+z = "Веснe"
+v = "Лету"
+l = "Осени"
+if x == 12:
+    k = y
+elif x <=2:
+    k = y
+elif x <= 5:
+    k = z
+elif x <= 8:
+    k = v
+elif x <=11:
+    k = l
+print(f"Вы выбрали месяц {year.get(x)}, он относится к {k}")
+
+print("")
+print("Задание 4")
+print("")
+
+
+b = input("Введите несколько слов, разделённых пробелами в список:").split()
+print(b)
+for ind, el in list(enumerate(b)):
+    print(f"{ind})", el[0:10])
+print("")
+print("Задание 5")
+print("")
+
+my = [7, 5, 3, 3, 2]
+print(my)
+a = int(input("Введите целое число: "))
+b = my.index(a)
+my.insert(b,a)
+print(my)
+print("")
+print("Задание 6")
+print("")
